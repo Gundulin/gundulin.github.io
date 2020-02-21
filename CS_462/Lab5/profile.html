@@ -1,0 +1,33 @@
+<!Doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./styles.css"/>
+        <title>Update Sensor Profile</title>
+    </head>
+    <body>
+        <h1>Sensor Profile</h1>
+        <div id="app">
+            <h2>Name</h2>
+            <p>{{name}}</p>
+            <h2>Current Location</h2>
+            <p>{{location}}</p>
+            <h2>Current Phone</h2>
+            <p>{{phone}}</p>
+            <h2>Current Threshold</h2>
+            <p>{{threshold}}</p>
+            <br/>
+            <h3>Update Profile:</h3>
+            <input v-model="update_name" placeholder="Name"/>
+            <input v-model="update_location" placeholder="Location"/>
+            <input v-model="update_phone" placeholder="Phone Number"/>
+            <input v-model="update_threshold" placeholder="Threshold"/>
+            <button v-on:click="updateProfile" type="submit">Update</button>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./profile_script.js"></script>
+    </body>
+
+
+
+</html>

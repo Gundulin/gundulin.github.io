@@ -1,0 +1,32 @@
+body {
+    background-color: azure;
+    margin: 10px;
+}
+
+#t_log {
+    display: inline-flex;
+    margin: 10px;
+}
+
+#v_log {
+    display: inline-flex;
+    margin: 10px;
+}
+
+#update {
+    display: block;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+#update a:hover {
+    color: red;
+}
+
+#ct {
+    display: inline;
+    padding: 10px;
+    font-size: larger;
+    margin-left: 50px;
+    border: 2px solid black;
+}

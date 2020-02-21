@@ -1,34 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <title>Timing</title>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
-  <script src="timing.js"></script>
-  <style type="text/css">
-    span.finished { cursor: pointer; color: blue; text-decoration: underline; }
-  </style>
-</head>
-<body ng-app="timing" ng-controller="MainCtrl">
-<div class="row">
-<div class="col-md-8 col-md-offset-2">
-<div class="page-header">
-  <h1>Timing</h1>
-</div>
-  <form ng-submit="addTiming()" style = "margin-top:30px;">
-    <input type="text" ng-model="number" placeholder="number" autofocus></input>
-    <input type="text" ng-model="name" placeholder="name"></input>
-    <button type="submit" focus-input>timing started</button>
-  </form>
-  <div ng-repeat="timing in timings | orderBy: '-ordinal'">
-    {{timing.number}} &middot;
-    {{timing.name}} &middot;
-    {{timing.time_out}} &middot;
-    {{timing.time_in}}
-    <span class="finished" ng-click="finished(timing.number)" ng-if="!timing.time_in">timing finished</span>
-    <span ng-if="!!timing.time_in">&middot; {{timeDiff(timing)}}</span>
-  </div>
-</div>
-</div>
-</body>
+  <head>
+    <link rel="stylesheet" href="./styles.css"/>
+  </head>
+  <body>
+    <h1>Temperature Pico</h1>
+    <div id="app">
+      <h2>Current Temperature</h2>
+      <p id="ct">{{current_temp}}° F</p>
+      <div id="update">
+        <a href="./profile.html">Update Profile</a>
+      </div>
+      <div id="t_log">
+        <h3>Temperature Log:</h3>
+        <ul>
+          <li v-for="t in temp_log">{{t.temperature}} : {{t.timestamp}}</li>
+        </ul>
+      </div>
+      <div id="v_log">
+        <h3>Violation Log:</h3>
+        <ul>
+          <li v-for="t in threshold_violations">{{t.temperature}} : {{t.timestamp}}</li>
+        </ul>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
