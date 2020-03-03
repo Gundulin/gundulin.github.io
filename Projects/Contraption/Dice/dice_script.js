@@ -8,6 +8,7 @@ let app = new Vue({
     },
     methods: {
         rollDice() {
+            this.result = [];
             if (this.numDice == '' || this.numDice == 1) {
                 result = Math.floor((Math.random() * this.sides) + 1);
                 this.result.push(result);
