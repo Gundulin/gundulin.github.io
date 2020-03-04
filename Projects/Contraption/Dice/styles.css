@@ -1,13 +1,25 @@
 h1 {
-    color:blue;
+    color:navy;
+    /* font-size: xx-large; */
 }
 
 body {
     display: flexbox;
     size: 100%;
     text-align: center;
+    background-color: silver;
+    color: navy;
 }
 
-#results h2{
-    display: inline;
+button {
+    background-color: whitesmoke;
+    color: black;
+    /* padding: 10px; */
+    padding-left: 20pt;
+    padding-right: 20pt;
+    font-size: larger;
 }
+
+/* #results h2{
+    
+} */
