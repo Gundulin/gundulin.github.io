@@ -14,11 +14,9 @@ let app = new Vue({
                 this.result.push(result);
             }
             else {
-                // result = []
                 for (i = 0; i < this.numDice; i++) {
                     this.result.push(Math.floor((Math.random() * this.sides) + 1));
                 }
-                // this.results = result;
             }
         }
     }

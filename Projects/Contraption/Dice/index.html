@@ -14,12 +14,9 @@
             <br/>
             <button v-on:click="rollDice" type="submit">Roll</button>
             <h3>Result(s)</h3>
-            <div id="results"></div>
-                <h2 v-for="r in result">{{r}} </h2>
-                <!-- <ul>
-                    <li v-for="r in result">{{r}}</li>
-                </ul> -->
-            </div>
+            <div id="results">
+                <h2 v-for="r in result">{{r}}  </h2>
+           </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
         <script src="./dice_script.js"></script>
