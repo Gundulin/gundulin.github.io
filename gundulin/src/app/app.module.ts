@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MysticValeCounterComponent } from './mystic-vale-counter/mystic-vale-counter.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MysticValeCounterComponent
   ],
   imports: [
     BrowserModule,
