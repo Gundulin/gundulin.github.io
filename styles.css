@@ -1,0 +1,26 @@
+.backdrop {
+    background-color: navy;
+    padding: 5%;
+}
+
+.page {
+    padding: 5%;
+    background-color: whitesmoke;
+}
+
+.profile-image-container {
+
+}
+
+.bio-container {
+    padding: 2.5%;
+    margin: 5%;
+    h1 {
+        
+    }
+    p {
+        font-size: large;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+
+}
