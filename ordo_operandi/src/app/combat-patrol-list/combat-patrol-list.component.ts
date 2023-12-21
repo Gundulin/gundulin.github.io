@@ -15,7 +15,8 @@ import { ButtonModule } from 'primeng/button';
 })
 export class CombatPatrolListComponent {
 
-  combatPatrols: string[] = [];
+  combatPatrols: string[];
+  show: boolean = true;
 
   constructor(private patrol: PatrolService) {
     this.combatPatrols = this.patrol.getCombatPatrolNames();

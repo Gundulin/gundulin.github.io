@@ -1,3 +1,5 @@
-<div *ngFor="let patrol of combatPatrols;">
-    <p-button [label]="patrol" (onClick)="goToGuide(patrol)"></p-button>
-</div>
+<ng-container>
+    <div class="button-container" *ngFor="let patrol of combatPatrols;">
+        <p-button [label]="patrol" (onClick)="goToGuide(patrol)"></p-button>
+    </div>
+</ng-container>
